@@ -1,0 +1,15 @@
+block head
+
+doctype html
+html(lang="ua")
+    head
+        meta(charset='utf-8')
+        title #{title}
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        link(rel="shortcut icon" href="img/favicon.png" type="image/x-icon")
+        link(rel='stylesheet', href='css/main.css')
+        // Global site tag (gtag.js) - Google Analytics
+        script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-3905422-8')
+    body
+        block content
+        script(src='js/main.js')

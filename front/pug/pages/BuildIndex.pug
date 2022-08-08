@@ -1,0 +1,119 @@
+.back
+    .container
+        a(href="#" class="back__link")
+            svg(width="8" height="15")
+                use(href='img/arrow.svg#arrow')
+            span back to account
+
+section.verification
+    .container
+        h1.verification__title Как мне узнать что аккаунт верифицирован?
+        .verification__video
+                iframe(src="https://www.youtube.com/embed/JxS5E-kZc2s" class="video iframeAdaptive" id="ifr" width="652" height="367")
+                .video__start
+                    button(type="button" class="video__button")
+                        svg(width="36" height="28")
+                            use(href="img/video/play.svg#play")
+        .verification__text
+                p.verification__text-item Верификация необходима для подтверждения личности владельца аккаунта и противодействию мошеническим схемам. После верификации сможешь выводить средства без дополнительного подтверждения личности.
+                p.verification__text-item Зайди в раздел "Баланс" личного кабинета. Активируй нужный кошелек, нажми кнопку "Вывести средства". Введи паспортные данные и отправь фото паспорта на проверку. Запрос на верификацию рассматривается после совершиния ставки в любом из сервисов сайта и внесения паспортных данных в систему.
+                p.verification__text-item Верификация занимает не более 72 часов. Ожидай ответ на своей электронной почте. Во время ожидания, игровой счет и баланс не блокируется. Можешь продолжать делать ставки и пользоваться другими сервисами FAVBET.
+        .verification__example
+                h3.verification__example-title.title Примеры качественных и некачественных фото
+                ul.verification__example-list
+                    li.verification__example-item В Интернет-банке Приват24 в разделе;
+                    li.verification__example-item «Мои счета»/«Кредитный рейтинг»;
+                    li.verification__example-item На сайте ubki.ua через вход для заемщика (размещен справа на сайте);
+                    li.verification__example-item Через приложение «Кредитная история» для Android и iOS;
+                    li.verification__example-item Через приложение Privat24 («Кредитный рейтинг»)
+                p.verification__example-info Кредитная история – это информация обо всех Ваших кредитах и о дисциплине их погашения, которую УБКИ (Украинское бюро кредитных историй) получает от банков, страховых и
+        .verification__need
+                h3.verification__need-title.title Приклад необхідних фотографій
+                ul.verification__need-list
+                    li.verification__need-item
+                        img(src="img/need/photo.png" alt="photo" class="image")
+                        .verification__need-search
+                            svg(width="29" height="29")
+                                use(href="img/need/scale-img.svg#scale-img")
+                    li.verification__need-item
+                        img(src="img/need/test1.png" alt="photo")
+                        .verification__need-search
+                            svg(width="29" height="29")
+                                use(href="img/need/scale-img.svg#scale-img")
+                    li.verification__need-item
+                        img(src="img/need/test2.png" alt="photo")
+                        .verification__need-search
+                            svg(width="29" height="29")
+                                use(href="img/need/scale-img.svg#scale-img")
+                    li.verification__need-item
+                        img(src="img/need/test2.png" alt="photo")
+                        .verification__need-search
+                            svg(width="29" height="29")
+                                use(href="img/need/scale-img.svg#scale-img")
+    .popup
+            .popup__body
+                .popup__image
+                    img(src="" class="bigImg")
+                    .close-btn
+                        span ✕
+section.faq
+    .container
+        h2.faq__title.title Часто задаваемы е вопросы
+        .faq__row
+            ul.faq__list
+                li.faq__item
+                    a(href="#" class='faq__link') Как пройти верификацию документов?
+                li.faq__item
+                    a(href="#" class='faq__link') Куда отправлять копии документов?
+                li.faq__item
+                    a(href="#" class='faq__link') Могу ли я изменять данные в аккаунте?
+                li.faq__item
+                    a(href="#" class='faq__link') Зачем Вам столько моих данных?
+                li.faq__item
+                    a(href="#" class='faq__link') Как мне узнать мой аккаунт верифицирован?
+                li.faq__item
+                    a(href="#" class='faq__link') Могу ли я изменять данные в аккаунте?
+                li.faq__item
+                    a(href="#" class='faq__link') Зачем Вам столько моих данных?
+            ul.faq__list.faq__list-not_show
+                li.faq__item
+                    a(href="#" class='faq__link') Как пройти верификацию документов?
+                li.faq__item
+                    a(href="#" class='faq__link') Куда отправлять копии документов?
+                li.faq__item
+                    a(href="#" class='faq__link') Могу ли я изменять данные в аккаунте?
+                li.faq__item
+                    a(href="#" class='faq__link') Зачем Вам столько моих данных?
+                li.faq__item
+                    a(href="#" class='faq__link') Как мне узнать мой аккаунт верифицирован?
+                li.faq__item
+                    a(href="#" class='faq__link') Могу ли я изменять данные в аккаунте?
+                li.faq__item
+                    a(href="#" class='faq__link') Зачем Вам столько моих данных?
+            button.question__btn show more
+
+section.question
+    .container
+        h3.sub-title.question__sub-title Остались вопросы ?
+        h2.question__title.title ПОДДЕРЖКА 24/7
+        ul.question__list
+            li.question__item
+                a(href="#" class='question__link')
+                    svg(width="40" height="40")
+                        use(href='img/mail.svg#mail')
+            li.question__item
+                a(href="#" class='question__link')
+                    svg(width="40" height="40")
+                        use(href='img/message.svg#message')
+            li.question__item
+                a(href="#" class='question__link')
+                    svg(width="40" height="40")
+                        use(href='img/support.svg#support')
+            li.question__item
+                a(href="#" class='question__link')
+                    svg(width="40" height="40")
+                        use(href='img/viber.svg#viber')
+            li.question__item
+                a(href="#" class='question__link')
+                    svg(width="40" height="40")
+                        use(href='img/telegram.svg#telegram')

@@ -1,0 +1,48 @@
+@media screen and (max-width: 768px)
+  .question__btn
+    display: block
+  .faq
+    &__row
+      flex-direction: column
+      align-items: center
+    &__list
+      margin: 0 0 10px 0
+      &:first-child
+        margin: 0 0 10px 0
+    &__list-not_show
+      display: none
+      &._open
+        display: block
+  .verification
+    &__need
+      &-item
+        width: 100%
+        height: 100%
+        &:not(:last-child)
+          margin: 0
+      &-list
+        display: grid
+        grid-template-columns: 210px 210px
+        grid-template-rows: 210px 210px
+        justify-content: stretch
+        gap: 16px
+    .popup
+      &__image
+        padding: 0 15px
+      img
+        max-width: 100%
+      .close-btn
+        right: 34px
+
+@media screen and (max-width: 475px)
+  .verification__video .video__start .video__button
+    width: 60px
+    height: 60px
+    svg
+      width: 24px
+      height: 18px
+  .verification
+    &__need
+      &-list
+        grid-template-columns: calc(50% - 8px) calc(50% - 8px)
+        grid-template-rows: calc(50% - 8px) calc(50% - 8px)

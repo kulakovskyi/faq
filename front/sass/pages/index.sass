@@ -1,0 +1,328 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$grey: #EDEDED
+$text: #292929
+$greenBtn: #05C489
+$white: #ffffff
+
+
+$svg_color_1: #8080AA
+
+$__body_color_2: #F6F6F6
+$__body_color-faq_2: #262832
+$__text_color_2: #ffffff
+$__svg_color_2: #BEBEBE
+
+
+$font-roboto-reg: 'Roboto-Condensed-Regular', sans-serif
+$font-roboto-bold: 'Roboto-Condensed-Bold', sans-serif
+
+$transition: .3s ease
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  background: $grey
+  img
+    max-width: 100%
+    height: auto
+
+.container
+  max-width: 690px
+  padding: 0 15px
+  margin: 0 auto
+
+.title
+  font-family: $font-roboto-bold
+  font-size: 18px
+  line-height: 21px
+  color: $blue
+  text-align: center
+  text-transform: uppercase
+
+.sub-title
+  font-family: $font-roboto-bold
+  font-size: 14px
+  line-height: 16px
+  color: $blue
+  text-align: center
+  text-transform: uppercase
+
+//back button
+.back
+  padding: 32px 0
+  background: $white
+  &__link
+    font-size: 16px
+    line-height: 14px
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    color: $blue
+    display: flex
+    align-items: center
+    svg
+      margin: 0 15px 0 0
+
+//verify
+.verification
+  padding: 0 0 65px 0
+  background: $white
+  &__title
+    margin: 0 0 30px 0
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    color: $blue
+  &__video
+    position: relative
+    margin: 0 0 30px 0
+    iframe
+      border: none
+      max-width: 100%
+      width: 100%
+      //height: 394px
+    .video__start
+      position: absolute
+      z-index: 2
+      width: 100%
+      height: 100%
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      display: flex
+      justify-content: center
+      align-items: center
+      background: url("../img/video/video-bg.jpg") no-repeat 100% 0/cover
+      &.not-show
+        display: none
+      .video__button
+        padding: 0
+        width: 80px
+        height: 80px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $blue
+        border: none
+        outline: none
+        cursor: pointer
+        transition: .3s ease
+        &:hover
+          transform: scale(1.05)
+  &__text
+    margin: 0 0 30px 0
+    &-item
+      font-family: $font-roboto-reg
+      font-size: 14px
+      line-height: 16px
+      color: $blue
+      &:not(:last-child)
+        margin: 0 0 10px 0
+  &__example
+    margin: 0 0 30px 0
+    &-title
+      margin: 0 0 15px 0
+      text-align: start
+    &-list
+      display: flex
+      flex-direction: column
+      margin: 0 0 30px 0
+    &-item
+      font-family: $font-roboto-reg
+      font-size: 14px
+      line-height: 16px
+      color: $blue
+      display: flex
+      align-items: center
+
+      &:not(:last-child)
+        margin: 0 0 15px 0
+      &::before
+        content: ""
+        width: 8px
+        height: 8px
+        background: $blue
+        border-radius: 50%
+        margin: 0 8px 0 0
+    &-info
+      font-family: $font-roboto-reg
+      font-size: 12px
+      line-height: 14px
+      color: $svg_color_1
+
+  &__need
+    &-title
+      margin: 0 0 15px 0
+      text-align: start
+    &-list
+      display: flex
+      justify-content: space-between
+    &-item
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      background: rgba(0, 0, 85, 0.1)
+      transform-origin: center
+      width: 150px
+      height: 150px
+      overflow: hidden
+      transition: .3s ease
+      cursor: pointer
+      &:not(:last-child)
+        margin: 0 15px 0 0
+      &:hover svg
+        transform: scale(1.04)
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      &._open
+        position: fixed
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 30
+        display: flex
+        justify-content: center
+        align-items: center
+    &-search
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      width: 50px
+      height: 50px
+      background: $blue
+      position: absolute
+      bottom: 0
+      right: 0
+      svg
+        transition: .3s ease
+  .popup
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 20
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 85, 0.8)
+    backdrop-filter: blur(5px)
+    opacity: 0
+    visibility: hidden
+    transition: .6s ease
+    &._open
+      opacity: 1
+      visibility: visible
+
+    &__image
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      transform: scale(0)
+      transition: .6s ease
+      &._open
+        transform: scale(1)
+    img
+      max-width: 500px
+
+    .close-btn
+      width: 10px
+      height: 10px
+      position: absolute
+      top: 0px
+      right: 19px
+      cursor: pointer
+      span
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $magenta
+        font-size: 20px
+        line-height: 20px
+        width: 30px
+        height: 30px
+        background: $blue
+
+//section faq
+.faq
+  padding: 25px 0 35px 0
+  background: $grey
+  &__title
+    margin: 0 0 25px 0
+  &__row
+    display: flex
+    justify-content: center
+  &__list
+    max-width: 320px
+    &:first-child
+      margin: 0 65px 0 0
+  &__item
+    &:not(:last-child)
+      margin: 0 0 10px 0
+  &__link
+    font-family: $font-roboto-reg
+    color: $blue
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    position: relative
+    font-size: 14px
+    line-height: 16px
+    &:hover
+     text-decoration: underline
+    &::before
+      content: ""
+      min-width: 8px
+      min-height: 8px
+      border-radius: 50%
+      background: $magenta
+      margin: 0 8px 0 0
+
+.question__btn
+  font-size: 14px
+  line-height: 16px
+  font-family: $font-roboto-bold
+  background: transparent
+  color: $blue
+  display: none
+  outline: none
+  border: none
+  text-transform: uppercase
+  margin: 15px 0 0 0
+//question block
+.question
+  padding: 30px 0 55px 0
+  background: $white
+  &__sub-title
+    margin: 0 0 8px 0
+  &__title
+    margin: 0 0 25px 0
+  &__list
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__item
+    &:not(:last-child)
+      margin: 0 15px 0 0
+  &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 4px
+    overflow: hidden
+    svg
+      fill: $svg_color_1
+
+
+
+
+
+
+

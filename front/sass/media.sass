@@ -13,28 +13,24 @@
       display: none
       &._open
         display: block
+
+@media screen and (max-width: 676px)
   .verification
+    padding: 0 0 40px 0
     &__need
-      &-item
-        width: 100%
-        height: 100%
-        &:not(:last-child)
-          margin: 0
       &-list
-        display: grid
-        grid-template-columns: 210px 210px
-        grid-template-rows: 210px 210px
-        justify-content: stretch
-        gap: 16px
-    .popup
-      &__image
-        padding: 0 15px
-      img
-        max-width: 100%
-      .close-btn
-        right: 34px
+        &:first-of-type
+          margin: 0 0 10px 0
+      &-title
+        margin: 0 0 10px 0
+      &-item
+        margin: 0 20px 20px 0
+        &:not(:nth-child(3n))
+          margin: 0 20px 20px 0
+
 
 @media screen and (max-width: 475px)
+
   .verification__video .video__start .video__button
     width: 60px
     height: 60px
@@ -42,7 +38,24 @@
       width: 24px
       height: 18px
   .verification
+    padding: 0 0 50px 0
     &__need
       &-list
-        grid-template-columns: calc(50% - 8px) calc(50% - 8px)
-        grid-template-rows: calc(50% - 8px) calc(50% - 8px)
+        display: grid
+        grid-template-columns: calc(50% - 10px) calc(50% - 10px)
+        gap: 20px
+        &:first-of-type
+          margin: 0 0 30px 0
+      &-item
+        max-width: 100%
+        margin: 0
+        &:not(:nth-child(3n))
+          margin: 0
+        &_image
+          margin: 0 0 10px 0
+
+//@media screen and (max-width: 375px)
+//  .verification
+//    &__need
+//      &-item
+//        max-width: 125px

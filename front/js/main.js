@@ -35,46 +35,4 @@ document.addEventListener("DOMContentLoaded", function() { // используе
     });
 });
 
-//popup
 
-const itemImage = document.querySelectorAll(".verification__need-item")
-const popUpFone = document.querySelector(".popup")
-const imgBig = document.querySelector('.bigImg')
-const closeBtnPopup = document.querySelector('.close-btn')
-const body = document.querySelector('body')
-const popUpImage = document.querySelector('.popup__image')
-
-function popupPaddingRight() {
-    let width = window.innerWidth - body.clientWidth + "px";
-    body.style.paddingRight = width;
-}
-
-function openPopUp(){
-    popUpFone.classList.add('_open')
-    popUpImage.classList.add('_open')
-    body.classList.add('_lock')
-    popupPaddingRight()
-}
-
-function  closePopUp(){
-    popUpFone.classList.remove('_open')
-    popUpImage.classList.remove('_open')
-    body.classList.remove('_lock')
-    body.style.paddingRight = 0 + "px"
-}
-
-itemImage.forEach(item => {
-    item.addEventListener("click", () => {
-        let imageMinItemSrc = item.querySelector("img").getAttribute('src');
-        openPopUp()
-        imgBig.setAttribute('src', imageMinItemSrc);
-        closeBtnPopup.addEventListener('click', ()=>{
-            closePopUp()
-        })
-        window.addEventListener('click', e =>{
-            if(e.target.classList.contains('_open')){
-                closePopUp()
-            }
-        })
-    })
-})
